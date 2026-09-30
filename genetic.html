@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f4f3ed">
+	<meta name="description" content="A welcoming guide for families navigating a child's genetic diagnosis, everyday care, and trusted sources of support.">
+	<title>Growing Together | Support for every kind of journey</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			color-scheme: light;
+			--paper: #f4f3ed;
+			--white: #fffefa;
+			--ink: #173b37;
+			--muted: #546b66;
+			--green: #24584c;
+			--green-dark: #173e35;
+			--coral: #c75b45;
+			--yellow: #e9c45e;
+			--blue: #dce9e7;
+			--line: #d7ded7;
+			--serif: "Newsreader", Georgia, serif;
+			--sans: "DM Sans", "Segoe UI", sans-serif;
+			--content: 1160px;
+		}
+
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+		body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+		img { display: block; max-width: 100%; }
+		a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+		button { font: inherit; }
+		.wrap { width: min(var(--content), calc(100% - 64px)); margin-inline: auto; }
+		.skip-link { position: absolute; z-index: 10; top: 8px; left: 8px; padding: 10px 14px; transform: translateY(-160%); background: var(--white); color: var(--ink); }
+		.skip-link:focus { transform: translateY(0); }
+		.site-header { position: relative; z-index: 2; border-bottom: 1px solid var(--line); background: var(--paper); }
+		.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+		.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 22px; font-weight: 700; white-space: nowrap; text-decoration: none; }
+		.brand-mark { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; background: var(--coral); color: var(--white); font-family: var(--sans); font-size: 18px; }
+		.nav-links { display: flex; align-items: center; gap: 27px; color: var(--muted); font-size: 12px; font-weight: 600; }
+		.nav-links a { text-decoration: none; }
+		.nav-links a:hover, .nav-links a:focus-visible { color: var(--coral); }
+		.nav-cta { padding: 11px 15px; border: 1px solid var(--green); color: var(--green); font-size: 11px; font-weight: 700; text-decoration: none; transition: background .18s ease, color .18s ease; }
+		.nav-cta:hover { background: var(--green); color: var(--white); }
+
+		.hero { padding: 38px 0 64px; }
+		.hero-grid { min-height: 520px; display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 60px; }
+		.hero-copy { padding: 22px 0 30px; }
+		.eyebrow { margin: 0 0 17px; color: var(--coral); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+		h1, h2, h3, p { letter-spacing: 0; }
+		.hero h1 { max-width: 560px; margin: 0 0 21px; font-family: var(--serif); font-size: clamp(58px, 6.4vw, 82px); font-weight: 600; line-height: .98; }
+		.hero h1 em { color: var(--coral); font-weight: 500; }
+		.hero-copy > p:not(.eyebrow) { max-width: 445px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+		.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 27px; }
+		.primary-link { min-height: 46px; display: inline-flex; align-items: center; padding: 0 18px; background: var(--green); color: var(--white); font-size: 11px; font-weight: 700; text-decoration: none; transition: background .18s ease, transform .18s ease; }
+		.primary-link:hover { transform: translateY(-2px); background: var(--green-dark); }
+		.quiet-link { padding: 9px 0; border-bottom: 1px solid var(--ink); font-size: 11px; font-weight: 700; text-decoration: none; }
+		.quiet-link:hover { color: var(--coral); border-color: var(--coral); }
+		.hero-visual { min-height: 475px; position: relative; overflow: hidden; background: var(--blue); }
+		.hero-visual img { width: 100%; height: 475px; object-fit: cover; object-position: 50% 42%; }
+		.image-note { position: absolute; right: 17px; bottom: 17px; max-width: 215px; padding: 13px 15px; background: var(--yellow); color: var(--ink); font-family: var(--serif); font-size: 18px; line-height: 1.15; }
+		.image-note span { display: block; margin-bottom: 5px; font-family: var(--sans); font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+		.welcome-band { padding: 25px 0; background: var(--green); color: var(--white); }
+		.welcome-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+		.welcome-inner p { max-width: 650px; margin: 0; font-family: var(--serif); font-size: 21px; line-height: 1.35; }
+		.welcome-inner a { flex: 0 0 auto; color: var(--yellow); font-size: 10px; font-weight: 700; }
+
+		.section { padding: 82px 0; }
+		.section-heading { max-width: 710px; margin-bottom: 36px; }
+		.section-heading h2 { margin: 0 0 13px; font-family: var(--serif); font-size: clamp(40px, 5vw, 58px); font-weight: 600; line-height: 1.02; }
+		.section-heading > p:last-child { max-width: 590px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+		.journey-list { border-top: 1px solid var(--line); }
+		.journey-row { display: grid; grid-template-columns: 66px minmax(180px, .75fr) 1.25fr; align-items: start; gap: 20px; padding: 23px 5px; border-bottom: 1px solid var(--line); }
+		.journey-number { color: var(--coral); font-family: var(--serif); font-size: 28px; }
+		.journey-row h3 { margin: 4px 0 0; font-family: var(--serif); font-size: 22px; font-weight: 600; }
+		.journey-row p { max-width: 535px; margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+
+		.support-section { background: var(--blue); }
+		.support-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 31px; border-top: 1px solid rgb(23 59 55 / 20%); }
+		.support-item { padding: 24px 0 23px; border-bottom: 1px solid rgb(23 59 55 / 20%); }
+		.support-index { display: block; margin-bottom: 16px; color: var(--coral); font-family: var(--serif); font-size: 25px; }
+		.support-item h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 23px; font-weight: 600; }
+		.support-item p { margin: 0; color: #425f59; font-size: 11px; line-height: 1.75; }
+		.support-note { margin: 25px 0 0; padding-left: 15px; border-left: 3px solid var(--coral); color: var(--ink); font-size: 11px; line-height: 1.7; }
+
+		.visit-section { background: var(--yellow); }
+		.visit-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 65px; align-items: start; }
+		.visit-intro h2 { margin: 0 0 14px; font-family: var(--serif); font-size: clamp(38px, 4.7vw, 54px); font-weight: 600; line-height: 1.02; }
+		.visit-intro > p:last-child { margin: 0; color: #455c4f; font-size: 12px; line-height: 1.8; }
+		.visit-plan { padding-top: 2px; }
+		.visit-plan h3 { margin: 0 0 16px; font-family: var(--serif); font-size: 24px; font-weight: 600; }
+		.checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 22px; margin: 0 0 23px; padding: 0; list-style: none; }
+		.checklist label { display: flex; align-items: start; gap: 9px; color: #314a40; font-size: 11px; line-height: 1.55; cursor: pointer; }
+		.checklist input { width: 16px; height: 16px; flex: 0 0 auto; margin: 0; accent-color: var(--green); }
+		.print-button { min-height: 42px; padding: 0 15px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 10px; font-weight: 700; cursor: pointer; transition: background .18s ease, color .18s ease; }
+		.print-button:hover { background: var(--ink); color: var(--white); }
+
+		.resources { display: grid; grid-template-columns: 1fr 1fr; gap: 0 38px; border-top: 1px solid var(--line); }
+		.resource { display: flex; justify-content: space-between; gap: 16px; padding: 19px 0; border-bottom: 1px solid var(--line); }
+		.resource h3 { margin: 0 0 5px; font-family: var(--serif); font-size: 19px; font-weight: 600; }
+		.resource p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.65; }
+		.resource a { flex: 0 0 auto; align-self: center; color: var(--green); font-size: 10px; font-weight: 700; }
+		.resource a:hover { color: var(--coral); }
+		.resource-caveat { margin: 17px 0 0; color: var(--muted); font-size: 10px; line-height: 1.65; }
+
+		.faq-section { padding-top: 70px; background: var(--white); }
+		.faq-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 65px; }
+		.faq-intro h2 { margin: 0; font-family: var(--serif); font-size: 48px; font-weight: 600; line-height: 1; }
+		.faq-list { border-top: 1px solid var(--line); }
+		.faq-list details { border-bottom: 1px solid var(--line); }
+		.faq-list summary { position: relative; padding: 17px 30px 17px 0; font-family: var(--serif); font-size: 19px; font-weight: 600; list-style: none; cursor: pointer; }
+		.faq-list summary::-webkit-details-marker { display: none; }
+		.faq-list summary::after { position: absolute; top: 16px; right: 3px; color: var(--coral); content: "+"; font-family: var(--sans); font-size: 20px; font-weight: 400; }
+		.faq-list details[open] summary::after { content: "−"; }
+		.faq-list details p { max-width: 650px; margin: -4px 25px 18px 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+		.care-note { padding: 31px 0; background: var(--green-dark); color: var(--white); }
+		.care-note-inner { display: grid; grid-template-columns: 170px 1fr; gap: 30px; align-items: start; }
+		.care-note h2 { margin: 0; color: var(--yellow); font-family: var(--serif); font-size: 25px; font-weight: 600; }
+		.care-note p { max-width: 830px; margin: 0; color: rgb(255 254 250 / 84%); font-size: 10px; line-height: 1.8; }
+		footer { padding: 23px 0; background: var(--paper); }
+		.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+		.footer-inner p { margin: 0; color: var(--muted); font-size: 9px; }
+		.footer-links { display: flex; gap: 16px; font-size: 9px; font-weight: 700; }
+
+		:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+		@media (max-width: 850px) {
+			.wrap { width: min(100% - 42px, 680px); }
+			.nav { min-height: 68px; }
+			.nav-links { gap: 15px; }
+			.nav-links a:nth-child(2) { display: none; }
+			.hero { padding-top: 28px; }
+			.hero-grid { min-height: 420px; grid-template-columns: .95fr 1.05fr; gap: 28px; }
+			.hero h1 { font-size: clamp(53px, 8vw, 70px); }
+			.hero-visual, .hero-visual img { min-height: 400px; height: 400px; }
+			.visit-grid, .faq-grid { grid-template-columns: 1fr; gap: 29px; }
+			.visit-intro { max-width: 500px; }
+			.faq-intro h2 { font-size: 42px; }
+		}
+		@media (max-width: 600px) {
+			html { scroll-padding-top: 16px; }
+			.wrap { width: calc(100% - 36px); }
+			.nav { flex-wrap: wrap; gap: 8px 12px; padding-block: 12px; }
+			.brand { font-size: 20px; }
+			.brand-mark { width: 28px; height: 28px; }
+			.nav-cta { padding: 9px 11px; font-size: 9px; }
+			.nav-links { width: 100%; justify-content: space-between; gap: 11px; order: 3; font-size: 10px; }
+			.nav-links a:nth-child(2) { display: inline; }
+			.hero { padding: 32px 0 37px; }
+			.hero-grid { display: flex; flex-direction: column; align-items: stretch; gap: 25px; }
+			.hero-copy { padding: 0; }
+			.hero h1 { max-width: 440px; font-size: clamp(57px, 14vw, 76px); }
+			.hero-copy > p:not(.eyebrow) { font-size: 13px; }
+			.hero-visual, .hero-visual img { min-height: 0; height: min(105vw, 390px); }
+			.hero-actions { gap: 16px; margin-top: 21px; }
+			.welcome-inner { align-items: start; flex-direction: column; gap: 12px; }
+			.welcome-inner p { font-size: 19px; }
+			.section { padding: 61px 0; }
+			.section-heading { margin-bottom: 25px; }
+			.section-heading h2 { font-size: 43px; }
+			.section-heading > p:last-child { font-size: 12px; }
+			.journey-row { grid-template-columns: 36px 1fr; gap: 10px; padding: 18px 0; }
+			.journey-number { grid-row: span 2; font-size: 24px; }
+			.journey-row h3 { margin: 0; font-size: 20px; }
+			.journey-row p { grid-column: 2; font-size: 11px; }
+			.support-grid { grid-template-columns: 1fr; }
+			.support-item { display: grid; grid-template-columns: 35px 1fr; column-gap: 10px; padding: 17px 0; }
+			.support-index { grid-row: span 2; margin: 1px 0 0; font-size: 21px; }
+			.support-item h3 { font-size: 21px; }
+			.support-item p { font-size: 11px; }
+			.checklist { grid-template-columns: 1fr; gap: 12px; }
+			.visit-grid, .faq-grid { gap: 26px; }
+			.visit-intro h2 { font-size: 43px; }
+			.resources { grid-template-columns: 1fr; }
+			.resource { gap: 10px; }
+			.resource h3 { font-size: 18px; }
+			.faq-section { padding-top: 55px; }
+			.faq-intro h2 { font-size: 39px; }
+			.faq-list summary { font-size: 17px; }
+			.care-note-inner { grid-template-columns: 1fr; gap: 12px; }
+			.footer-inner { align-items: start; flex-direction: column; gap: 10px; }
+			.footer-links { flex-wrap: wrap; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+		}
+		@media print {
+			body { background: white; color: black; font-family: Georgia, serif; }
+			body * { visibility: hidden !important; }
+			#visit-plan, #visit-plan * { visibility: visible !important; }
+			#visit-plan { position: absolute; inset: 0 auto auto 0; width: 100%; padding: 18px; background: white; }
+			#visit-plan h3 { font-size: 22px; }
+			#visit-plan .checklist { grid-template-columns: 1fr 1fr; }
+			#visit-plan .checklist label { color: black; font-size: 12px; }
+			#visit-plan input { appearance: checkbox; }
+			#visit-plan .print-button { display: none; }
+		}
+	</style>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<header class="site-header">
+		<nav class="nav wrap" aria-label="Main navigation">
+			<a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">g</span>Growing Together</a>
+			<div class="nav-links"><a href="#understanding">Understanding</a><a href="#support">Everyday support</a><a href="#resources">Trusted resources</a></div>
+			<a class="nav-cta" href="#visit-plan">Prepare for a visit</a>
+		</nav>
+	</header>
+
+	<main id="main">
+		<section class="hero wrap" id="top" aria-labelledby="hero-title">
+			<div class="hero-grid">
+				<div class="hero-copy">
+					<p class="eyebrow">A family guide to genetic conditions</p>
+					<h1 id="hero-title">Every child is more than a <em>diagnosis.</em></h1>
+					<p>A diagnosis can bring new questions, appointments, and big feelings. Find clear starting points for understanding a genetic condition and supporting the whole child, one step at a time.</p>
+					<div class="hero-actions"><a class="primary-link" href="#understanding">Explore the guide <span aria-hidden="true">&nbsp;→</span></a><a class="quiet-link" href="#resources">Find trusted resources</a></div>
+				</div>
+				<div class="hero-visual"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="A parent sharing a warm moment with a young child" fetchpriority="high"><div class="image-note"><span>For the whole family</span>Care, connection, and room to grow.</div></div>
+			</div>
+		</section>
+
+		<section class="welcome-band" aria-label="A note for families"><div class="welcome-inner wrap"><p>You do not need to have every answer today. Start with the question that matters most to your family.</p><a href="#visit-plan">MAKE A PLAN FOR YOUR NEXT APPOINTMENT&nbsp; ↓</a></div></section>
+
+		<section class="section wrap" id="understanding" aria-labelledby="understanding-title">
+			<div class="section-heading"><p class="eyebrow">Start with understanding</p><h2 id="understanding-title">A diagnosis is information. It is not the whole story.</h2><p>Genetic conditions can affect health, development, or both. Each condition is different, and children with the same diagnosis can have different needs and strengths.</p></div>
+			<div class="journey-list">
+				<article class="journey-row"><span class="journey-number" aria-hidden="true">01</span><h3>What the words mean</h3><p>Genes carry instructions used by the body. A genetic condition can happen when a gene or chromosome works differently. A health professional can explain what a particular result means for your child.</p></article>
+				<article class="journey-row"><span class="journey-number" aria-hidden="true">02</span><h3>How it is identified</h3><p>Families may learn about a condition through screening, a medical evaluation, or genetic testing. Testing can offer useful information, but it does not always give a clear answer or predict exactly how a child will develop.</p></article>
+				<article class="journey-row"><span class="journey-number" aria-hidden="true">03</span><h3>What comes next</h3><p>A care plan may involve a primary care clinician and other specialists. Ask who coordinates care, which concerns need follow-up, and how to reach the team between visits.</p></article>
+				<article class="journey-row"><span class="journey-number" aria-hidden="true">04</span><h3>Room for the child</h3><p>Alongside medical needs, make space for play, friendships, learning, rest, and the things your child enjoys. Support should help a child participate in life, not reduce them to a list of appointments.</p></article>
+			</div>
+		</section>
+
+		<section class="section support-section" id="support" aria-labelledby="support-title">
+			<div class="wrap">
+				<div class="section-heading"><p class="eyebrow">Support for everyday life</p><h2 id="support-title">Small, steady steps can make a difference.</h2><p>Families do not have to solve everything at once. Start with what is most useful this week, then build from there with your child's care team.</p></div>
+				<div class="support-grid">
+					<article class="support-item"><span class="support-index" aria-hidden="true">01</span><h3>Make care easier to follow</h3><p>Keep a simple list of medicines, appointments, questions, and the names of the people involved in care. Ask the team for a written summary when it helps.</p></article>
+					<article class="support-item"><span class="support-index" aria-hidden="true">02</span><h3>Ask about daily supports</h3><p>Talk with your child's clinician about therapies, developmental services, school accommodations, or community programs that may fit your child's needs.</p></article>
+					<article class="support-item"><span class="support-index" aria-hidden="true">03</span><h3>Include your child</h3><p>Use words and explanations that fit your child's age and communication style. Invite their preferences and questions whenever possible.</p></article>
+					<article class="support-item"><span class="support-index" aria-hidden="true">04</span><h3>Look after caregivers</h3><p>It is okay to ask someone you trust for a practical hand. Ask your care team about respite, social work, or caregiver support options in your area.</p></article>
+					<article class="support-item"><span class="support-index" aria-hidden="true">05</span><h3>Make space for siblings</h3><p>Siblings may have their own questions and feelings. Offer honest, age-appropriate conversations and time together that is not about medical care.</p></article>
+					<article class="support-item"><span class="support-index" aria-hidden="true">06</span><h3>Connect at your pace</h3><p>Another family may understand parts of the experience, but every family's situation is personal. Choose peer support that feels safe and right for you.</p></article>
+				</div>
+				<p class="support-note"><strong>Not sure where to start?</strong> Write down one concern and bring it to your child's next appointment. You can ask the clinic who is best placed to help.</p>
+			</div>
+		</section>
+
+		<section class="section visit-section" aria-labelledby="visit-title">
+			<div class="visit-grid wrap">
+				<div class="visit-intro"><p class="eyebrow">A little preparation</p><h2 id="visit-title">Make room for your questions.</h2><p>Appointments can move quickly. Pick the prompts that matter to you and bring them along. It is okay to ask for plain language or to pause and take notes.</p></div>
+				<div class="visit-plan" id="visit-plan">
+					<h3>Questions for your care team</h3>
+					<ul class="checklist">
+						<li><label><input type="checkbox"> What does this diagnosis or test result mean for my child?</label></li>
+						<li><label><input type="checkbox"> What is known, and what is still uncertain?</label></li>
+						<li><label><input type="checkbox"> Who coordinates my child's care?</label></li>
+						<li><label><input type="checkbox"> What changes should prompt us to contact you?</label></li>
+						<li><label><input type="checkbox"> Are there services or supports we should ask about?</label></li>
+						<li><label><input type="checkbox"> Where can our family find reliable information?</label></li>
+					</ul>
+					<button class="print-button" id="print-plan" type="button">Print this question list</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="section wrap" id="resources" aria-labelledby="resources-title">
+			<div class="section-heading"><p class="eyebrow">Reliable places to learn more</p><h2 id="resources-title">Start with trusted information.</h2><p>These organizations provide educational information about genetics, rare conditions, and family support. Your child's clinician can help apply general information to your situation.</p></div>
+			<div class="resources">
+				<article class="resource"><div><h3>MedlinePlus Genetics</h3><p>Plain-language information about genes, genetic conditions, and genetic testing from the U.S. National Library of Medicine.</p></div><a href="https://medlineplus.gov/genetics/" target="_blank" rel="noopener noreferrer">Visit site&nbsp; ↗</a></article>
+				<article class="resource"><div><h3>Genetic and Rare Diseases Information Center</h3><p>Information and support resources for people and families affected by rare and genetic conditions.</p></div><a href="https://rarediseases.info.nih.gov/" target="_blank" rel="noopener noreferrer">Visit site&nbsp; ↗</a></article>
+				<article class="resource"><div><h3>National Society of Genetic Counselors</h3><p>Learn what genetic counselors do and use the directory to look for a counselor.</p></div><a href="https://findageneticcounselor.nsgc.org/" target="_blank" rel="noopener noreferrer">Find a counselor&nbsp; ↗</a></article>
+				<article class="resource"><div><h3>National Organization for Rare Disorders</h3><p>Educational resources, condition information, and community support for rare disease families.</p></div><a href="https://rarediseases.org/" target="_blank" rel="noopener noreferrer">Visit site&nbsp; ↗</a></article>
+			</div>
+			<p class="resource-caveat">Organizations, services, and eligibility vary by country. These links are for general education and are not endorsements or a substitute for medical advice.</p>
+		</section>
+
+		<section class="section faq-section" aria-labelledby="faq-title">
+			<div class="faq-grid wrap">
+				<div class="faq-intro"><p class="eyebrow">Common questions</p><h2 id="faq-title">A few helpful starting points.</h2></div>
+				<div class="faq-list">
+					<details><summary>Are all genetic conditions inherited?</summary><p>No. Some genetic conditions are inherited from a parent, while others can happen for the first time in a child. A genetic counselor or clinician can explain what a specific result may mean for your family.</p></details>
+					<details><summary>Does a genetic test explain everything?</summary><p>Not always. A test may identify a cause, offer clues, or come back without a clear answer. The meaning depends on the test and your child's health history, so review results with a qualified health professional.</p></details>
+					<details><summary>Where can I find help for my child's needs?</summary><p>Start with your child's primary care clinician or specialist. Depending on your child's situation, they may connect you with a genetic counselor, therapist, social worker, school support, or local family organization.</p></details>
+					<details><summary>How should I talk with my child about a diagnosis?</summary><p>Use honest, simple language that fits your child's age and understanding. You can share information a little at a time, invite questions, and ask your care team for help finding words that suit your child.</p></details>
+				</div>
+			</div>
+		</section>
+
+		<aside class="care-note" aria-labelledby="care-note-title"><div class="care-note-inner wrap"><h2 id="care-note-title">A note about care</h2><p>This website offers general educational information only. It cannot diagnose, treat, or replace advice from your child's healthcare professional. Medical needs vary; discuss questions about symptoms, testing, treatment, or care with a qualified clinician. If your child may be in immediate danger or needs urgent medical attention, contact your local emergency service.</p></div></aside>
+	</main>
+
+	<footer><div class="footer-inner wrap"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">g</span>Growing Together</a><p>Made with care for children and the people who love them.</p><div class="footer-links"><a href="#understanding">The guide</a><a href="#resources">Resources</a><a href="#top">Back to top ↑</a></div></div></footer>
+
+	<script>
+		document.querySelector("#print-plan").addEventListener("click", () => window.print());
+	</script>
+</body>
+</html>
